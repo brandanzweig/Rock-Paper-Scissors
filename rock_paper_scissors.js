@@ -1,9 +1,13 @@
+function game() {
+    for (let i = 0; i < 5; i++){
+
 function computerPlay() {
     let choices = ["rock", "paper", "scissors"];
     return choices[Math.floor(Math.random() * choices.length)]
 }
 
 let playerSelection = prompt("Choose Rock, Paper, or Scissors");
+const computerSelection = computerPlay();
 
 function playRound(playerSelection, computerSelection) {
     if (playerSelection.toLowerCase() == "rock") {
@@ -33,6 +37,7 @@ function playRound(playerSelection, computerSelection) {
             return "You win! Scissors beats Paper";
         }
     }
+        }
+        console.log(playRound(playerSelection, computerSelection));
+    }
 }
-const computerSelection = computerPlay();
-console.log(playRound(playerSelection, computerSelection));
