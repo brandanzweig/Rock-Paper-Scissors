@@ -41,9 +41,6 @@ function playRound(playerSelection, computerSelection) {
 
 let playerScore = parseInt(0);
 let computerScore = parseInt(0);
-let win = "You win"
-let lose = "You lose"
-let tie = "It's a tie"
 
 for (let i = 0; i < 5; i++) {
     let playerSelection = prompt("Choose Rock, Paper, or Scissors");
