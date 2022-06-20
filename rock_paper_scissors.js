@@ -39,8 +39,8 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-let playerScore = parseInt(0);
-let computerScore = parseInt(0);
+let playerScore = 0;
+let computerScore = 0;
 
 for (let i = 0; i < 5; i++) {
     let playerSelection = prompt("Choose Rock, Paper, or Scissors");
