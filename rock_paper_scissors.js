@@ -1,6 +1,6 @@
 function computerPlay() {
     const choices = ["rock", "paper", "scissors"];
-    return choices[Math.floor(Math.random() * choices.length)] // Test
+    return choices[Math.floor(Math.random() * choices.length)]
 }
 
 function playRound(playerSelection, computerSelection) {
