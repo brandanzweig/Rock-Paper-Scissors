@@ -35,7 +35,7 @@ function playRound(playerSelection) {
             + "<br><br>Player score: " + playerScore + "<br>Computer score: " + computerScore)
 
         if (computerScore == 5) {
-            result += '<br><br>I won the game! Reload the page to play again'
+            result += '<br><br> You lost the game. Reload the page to play again'
         }
     }
 
