@@ -12,6 +12,7 @@ function computerPlay() {
 function playRound(playerSelection) {
     let computerSelection = computerPlay()
     let result = ""
+    
 
     if ((playerSelection == 'rock' && computerSelection == 'scissors') ||
         (playerSelection == 'scissors' && computerSelection == 'paper') ||
@@ -19,28 +20,27 @@ function playRound(playerSelection) {
         
         playerScore += 1
         result = ('You win! ' + playerSelection + ' beats ' + computerSelection
-            + "<br><br>Player score: " + playerScore + "<br>Computer score: " + computerScore)
+            + "\n \n Player score: " + playerScore + "\n Computer score: " + computerScore)
 
         if (playerScore == 5) {
-            result += '<br><br>You won the game! Reload the page to play again'
+            result += '\n \n You won the game! Reload the page to play again'
         }
     }
     else if (playerSelection == computerSelection) {
         result = ('It\'s a tie. You both chose ' + playerSelection
-            + "<br><br>Player score: " + playerScore + "<br>Computer score: " + computerScore)
+            + "\n \n Player score: " + playerScore + "\n Computer score: " + computerScore)
     }
     else {
         computerScore += 1
         result = ('You lose! ' + computerSelection + ' beats ' + playerSelection
-            + "<br><br>Player score: " + playerScore + "<br>Computer score: " + computerScore)
+            + "\n \n Player score: " + playerScore + "\n Computer score: " + computerScore)
 
         if (computerScore == 5) {
-            result += '<br><br> You lost the game. Reload the page to play again'
+            result += '\n \n You lost the game. Reload the page to play again'
         }
     }
 
-
-    document.getElementById("result").innerHTML = result
+    document.getElementById("result").textContent = result
     return;
 }
 
