@@ -1,7 +1,7 @@
 function computerPlay() {
-    const choices = ["rock", "paper", "scissors"];
+    const choices = ["Rock", "Paper", "Scissors"];
     const randomNum = [Math.floor(Math.random() * choices.length)];
-    const compChoice = choices[randomNum];
+    const compChoice = choices[randomNum].toLowerCase();
     return compChoice
 }
 
@@ -26,6 +26,6 @@ function playRound(playerSelection, computerSelection) {
         return "You win! Rock beats scissors!"
     }                       
 }
-const playerSelection = "rock";
+const playerSelection = ("rock").toLowerCase();
 const computerSelection = computerPlay();
 console.log(playRound(playerSelection, computerSelection));
