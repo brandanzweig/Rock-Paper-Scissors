@@ -36,12 +36,11 @@ function playRound(playerSelection, computerSelection) {
     }                       
 }
 
-const playerSelection = ("rock").toLowerCase();
-
 function game() {
     for (let i = 0; i < 5; i++) {
+        const playerSelection = prompt("Do you want rock, paper, or scissors?").toLowerCase();
         const computerSelection = computerPlay();
-        playRound(playerSelection, computerSelection); 
+        console.log(playRound(playerSelection, computerSelection)); 
      }
 
     if (playerScore > compScore) {
