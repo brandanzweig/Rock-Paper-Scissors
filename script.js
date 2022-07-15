@@ -2,19 +2,14 @@ let compScore = 0;
 let playerScore = 0;
 
 function computerPlay() {
-    const choices = ["Rock", "Paper", "Scissors"];
+    const choices = ["rock", "paper", "scissors"];
     const randomNum = [Math.floor(Math.random() * choices.length)];
-    const compChoice = choices[randomNum].toLowerCase();
-    return compChoice
+    return choices[randomNum];
 }
 
 function playRound(playerSelection, computerSelection) {
-    if (playerSelection === "rock" && computerSelection === "rock") {
-        return "You tied! You both picked Rock"    
-    } else if (playerSelection === "scissors" && computerSelection === "scissors") {
-        return "You tied! You both picked scissors"    
-    } else if (playerSelection === "paper" && computerSelection === "paper") {
-        return "You tied! You both picked paper"    
+    if (playerSelection === computerSelection) {
+        return `It's a tie! You both choose ${playerSelection}`;  
     } else if (playerSelection === "scissors" && computerSelection === "paper") {
         playerScore++;
         return "You win! Scissors beats paper!"
