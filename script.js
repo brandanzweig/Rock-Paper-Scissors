@@ -92,21 +92,3 @@ scissorsButton.addEventListener("click", () => {
     updateScores(playerScore, compScore);
     checkForWinner(playerScore, compScore);
 })
-
-
-// function game() {
-    // for (let i = 0; i < 5; i++) {
-    //     const playerSelection = prompt("Do you want rock, paper, or scissors?").toLowerCase();
-    //     const computerSelection = computerPlay();
-    //     console.log(playRound(playerSelection, computerSelection)); 
-    //  }
-
-    // if (playerScore > compScore) {
-    //     return "You won!"
-    // } else if (playerScore < compScore) {
-    //     return "You lose..."
-    // } else {
-    //     return "It's a tie!"
-    // }
-// }
-// console.log(game());
