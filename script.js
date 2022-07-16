@@ -15,53 +15,39 @@ function computerPlay() {
 }
 
 function playRound(playerSelection, computerSelection) {
+    const p = document.createElement("p")
     if (playerSelection === computerSelection) {
-        const p = document.createElement("p")
         p.innerText = `It's a tie! You both choose ${playerSelection}`;
-        outcome.appendChild(p);
     } else if (playerSelection === "scissors" && computerSelection === "paper") {
         playerScore++;
-        const p = document.createElement("p")
         p.innerText = "You win! Scissors beats paper!"
-        outcome.appendChild(p);
     } else if (playerSelection === "scissors" && computerSelection === "rock") {
         compScore++;
-        const p = document.createElement("p")
         p.innerText = "You Lose! Rock beats scissors!"
-        outcome.appendChild(p);
     } else if (playerSelection === "paper" && computerSelection === "scissors") {
         compScore++;
-        const p = document.createElement("p")
         p.innerText = "You Lose! Paper beats scissors!"
-        outcome.appendChild(p);
     } else if (playerSelection === "paper" && computerSelection === "rock") {
         playerScore++;
-        const p = document.createElement("p")
         p.innerText = "You win! Paper beats rock!"
-        outcome.appendChild(p);
     } else if (playerSelection === "rock" && computerSelection === "paper") {
         compScore++;
-        const p = document.createElement("p")
         p.innerText = "You Lose! Paper beats rock!"
-        outcome.appendChild(p);
     } else if (playerSelection === "rock" && computerSelection === "scissors") {
         playerScore++;
-        const p = document.createElement("p")
         p.innerText = "You win! Rock beats scissors!"
-        outcome.appendChild(p);
-    }                       
+    }
+    outcome.appendChild(p);                       
 }
 
 const checkForWinner = (playerScore, compScore) => {
+    const h2 = document.createElement("h2");
     if (playerScore === 5) {
-        const h2 = document.createElement("h2");
         h2.innerText = `You won ${playerScore} to ${compScore}!`;
-        outcome.appendChild(h2)
     } else if (compScore === 5) {
-        const h2 = document.createElement("h2");
         h2.innerText = `You lost ${compScore} to ${playerScore}!`;
-        outcome.appendChild(h2)
     }  
+    outcome.appendChild(h2)
 }
 
 const updateScores = (playerScore, compScore) => {
