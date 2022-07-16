@@ -3,7 +3,7 @@ let playerScore = 0;
 
 function computerPlay() {
     const choices = ["rock", "paper", "scissors"];
-    const randomNum = [Math.floor(Math.random() * choices.length)];
+    const randomNum = Math.floor(Math.random() * choices.length);
     return choices[randomNum];
 }
 
